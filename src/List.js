@@ -48,7 +48,7 @@ const onFormSubmit = (e) => {
    return (
       <div className="App-list">
          <form onSubmit = {onFormSubmit}>
-         <div className="inputContainer">
+         <div className="todoContainer">
          
          <input className="inputArea" placeholder="Your Plans..." type="text" onChange ={onChangeEvent} value = {input} />
          <button className="add btn" onClick = {() => addItem()}>ADD</button>
@@ -60,7 +60,8 @@ const onFormSubmit = (e) => {
             </ol>
          </div>
          <div className="todoContainer">
-         <button className="delete btn" onClick = {() => deleteAll()}>DELETE ALL</button>
+            {todoList.length > 0 &&
+         <button className="delete btn" onClick = {() => deleteAll()}>DELETE ALL</button>}
          </div>
          </form>
 
